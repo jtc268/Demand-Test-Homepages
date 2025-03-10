@@ -1,0 +1,37 @@
+{
+  "name": "demand-testing-platform",
+  "version": "1.0.0",
+  "description": "A platform for launching landing pages to gauge demand and collect email sign-ups",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "create-landing": "node scripts/create-landing-page.js",
+    "seed": "curl -X POST http://localhost:3000/api/seed",
+    "deploy": "node scripts/deploy.js"
+  },
+  "dependencies": {
+    "next": "^13.4.19",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "@sendgrid/mail": "^7.7.0",
+    "mongoose": "^7.4.3",
+    "dotenv": "^16.3.1",
+    "axios": "^1.4.0",
+    "formik": "^2.4.3",
+    "yup": "^1.2.0",
+    "tailwindcss": "^3.3.3",
+    "postcss": "^8.4.28",
+    "autoprefixer": "^10.4.15",
+    "mongodb": "^5.7.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.47.0",
+    "eslint-config-next": "^13.4.19",
+    "typescript": "^5.1.6",
+    "@types/react": "^18.2.20",
+    "@types/node": "^20.5.1"
+  }
+} 
