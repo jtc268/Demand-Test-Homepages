@@ -3,33 +3,14 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import { useRouter } from 'next/router';
 import axios from 'axios';
+import { ICampaignData } from '../types';
 
 interface CampaignFormProps {
-  initialValues?: {
-    name: string;
-    slug: string;
-    description: string;
-    active: boolean;
-    template: string;
-    config: {
-      title: string;
-      subtitle: string;
-      ctaText: string;
-      thankYouMessage: string;
-      colors: {
-        primary: string;
-        secondary: string;
-        background: string;
-        text: string;
-      };
-      logoUrl: string;
-      heroImageUrl: string;
-    };
-  };
+  initialValues?: ICampaignData;
   isEditing?: boolean;
 }
 
-const defaultInitialValues = {
+const defaultInitialValues: ICampaignData = {
   name: '',
   slug: '',
   description: '',

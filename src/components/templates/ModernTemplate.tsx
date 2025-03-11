@@ -26,7 +26,7 @@ const ModernTemplate: React.FC<ModernTemplateProps> = ({ campaign }) => {
       await axios.post('/api/subscribe', {
         email: values.email,
         name: values.name || '',
-        campaignId: campaign.id || campaign._id,
+        campaignId: campaign._id,
       });
       
       setSubmitted(true);

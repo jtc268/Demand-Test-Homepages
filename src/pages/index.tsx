@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+import TestFeatures from '../components/TestFeatures';
 
 export default function Home() {
   return (
@@ -17,6 +18,14 @@ export default function Home() {
           <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">
             Create beautiful landing pages, collect email sign-ups, and validate your business ideas quickly.
           </p>
+        </div>
+
+        {/* Integration Test Features */}
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">
+            Test Our Integrations
+          </h2>
+          <TestFeatures />
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 mb-16">
@@ -72,6 +81,43 @@ export default function Home() {
           <Link href="/dashboard" className="btn btn-primary px-8 py-3 text-lg">
             Get Started for Free
           </Link>
+        </div>
+
+        {/* Pricing Section */}
+        <div className="bg-white rounded-xl shadow-lg p-8 mt-16 max-w-md mx-auto">
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-6">Premium Access</h2>
+          <div className="text-center mb-8">
+            <div className="text-5xl font-bold text-primary-600 mb-2">$9.99</div>
+            <p className="text-gray-600">One-time payment for full access</p>
+          </div>
+          <ul className="space-y-4 mb-8">
+            <li className="flex items-center">
+              <svg className="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+              </svg>
+              Unlimited Landing Pages
+            </li>
+            <li className="flex items-center">
+              <svg className="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+              </svg>
+              Advanced Analytics
+            </li>
+            <li className="flex items-center">
+              <svg className="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+              </svg>
+              Priority Support
+            </li>
+          </ul>
+          <a
+            href="https://buy.stripe.com/eVa9B82oX1ZW7cs7sv"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-primary w-full py-3 text-lg font-semibold"
+          >
+            Upgrade Now
+          </a>
         </div>
       </main>
 
